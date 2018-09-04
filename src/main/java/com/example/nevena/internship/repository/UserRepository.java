@@ -11,6 +11,8 @@ import com.example.nevena.internship.domain.User;
 public interface UserRepository extends JpaRepository<User, Long>{
 
 	User findOneById(Long id);
+	User findOneByActivationLink(String key);
 	List<User>findAll();
-
+	User findOneByUsername(String username);
+	
 }

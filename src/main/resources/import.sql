@@ -1,0 +1,1 @@
+ insert into user (id, username , email, password, role, active, activationLink) values (1, 'admin', 'admin@mail.com', 'admin' , 'ADMIN', true, 'link1');

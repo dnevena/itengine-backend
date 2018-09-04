@@ -5,10 +5,16 @@ import com.example.nevena.internship.domain.User;
 public class ResponseDTO {
 
 	private String message;
+	
 	private User user;
 	
-	public ResponseDTO() {
-		super();
+	public ResponseDTO(String message) {
+		this.message = message;
+	}
+	
+	public ResponseDTO(String message,User user){
+		this.message = message;
+		this.user = user;
 	}
 	public String getMessage() {
 		return message;

@@ -19,12 +19,12 @@ public class ArticleService{
 	@Autowired
 	private UserRepository userRepository;
 	
-	public Article createArticle(String name, String description, Long userId) {
+	public Article createArticle(String name, String description, Long principalId) {
 		Article article = new Article();
 		article.setName(name);
 		article.setDescription(description);
 		
-		User user = userRepository.findOneById(userId);
+		User user = userRepository.findOneById(principalId);
 		article.setUser(user);
 		user.getLista().add(article);
 		userRepository.save(user);
@@ -45,11 +45,11 @@ public class ArticleService{
 		
 	}
 	
-	public Article editArticle(Long id, String name, String description, Long userId) {
+	public Article editArticle(Long id, String name, String description, Long principalId) {
 		Article article = articleRepository.findOneById(id);
 		article.setName(name);
 		article.setDescription(description);
-		User user = userRepository.findOneById(userId);
+		User user = userRepository.findOneById(principalId);
 		article.setUser(user);
 		articleRepository.save(article);
 		return article;

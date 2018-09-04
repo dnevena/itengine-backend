@@ -3,9 +3,9 @@ package com.example.nevena.internship.controller.dto;
 public class ArticleDTO {
 
 	private String name;
+
 	private String description;
-	private Long userId;
-	
+
 	public ArticleDTO() {
 		super();
 	}
@@ -21,12 +21,4 @@ public class ArticleDTO {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Long getUserId() {
-		return userId;
-	}
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-	
-	
 }
